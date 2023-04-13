@@ -1,11 +1,9 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/{APP-NAME}.svg?style=shield)](https://circleci.com/gh/giantswarm/{APP-NAME})
+[![CircleCI](https://circleci.com/gh/giantswarm/tekton-dashboard-loki-proxy.svg?style=shield)](https://circleci.com/gh/giantswarm/tekton-dashboard-loki-proxy)
 
-[Read me after cloning this template (GS staff only)](https://intranet.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
+# tekton-dashboard-loki-proxy chart
 
-# {APP-NAME} chart
-
-Giant Swarm offers a {APP-NAME} App which can be installed in workload clusters.
-Here we define the {APP-NAME} chart with its templates and default configuration.
+Giant Swarm offers a tekton-dashboard-loki-proxy App which can be installed in workload clusters.
+Here we define the tekton-dashboard-loki-proxy chart with its templates and default configuration.
 
 **What is this app?**
 
@@ -67,4 +65,3 @@ Not following these limitations will most likely result in a broken deployment.
 
 ## Credit
 
-- {APP HELM REPOSITORY}
