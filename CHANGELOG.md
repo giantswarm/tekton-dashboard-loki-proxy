@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Request logging
+
+### Changed
+
+- Recreate the query and client objects for each request
+
 ## [0.0.2] - 2023-04-13
 
 ### Fixed

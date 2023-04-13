@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/prometheus/common/config"
 
 	"github.com/grafana/loki/pkg/logcli/client"
@@ -32,29 +33,23 @@ func main() {
 	app := fiber.New(fiber.Config{
 		DisableStartupMessage: true,
 	})
-
-	parallelDuration, _ := time.ParseDuration("1h")
-	q := &query.Query{
-		Start:              time.Now().Add(-since),
-		End:                time.Now(),
-		Quiet:              true,
-		NoLabels:           true,
-		Limit:              0,
-		BatchSize:          5000,
-		ColoredOutput:      false,
-		ParallelMaxWorkers: 3,
-		ParallelDuration:   parallelDuration,
-		Forward:            true,
-	}
-
-	client := &client.DefaultClient{
-		TLSConfig: config.TLSConfig{},
-		OrgID:     orgID,
-		Address:   lokiEndpoint,
-	}
+	app.Use(logger.New())
 
 	app.Get("/logs/:namespace/:pod/:container", func(c *fiber.Ctx) error {
-		q.QueryString = fmt.Sprintf(`{container="%s",namespace="%s",pod="%s"}`, c.Params("container"), c.Params("namespace"), c.Params("pod"))
+		parallelDuration, _ := time.ParseDuration("1h")
+		q := &query.Query{
+			Start:              time.Now().Add(-since),
+			End:                time.Now(),
+			Quiet:              true,
+			NoLabels:           true,
+			Limit:              0,
+			BatchSize:          5000,
+			ColoredOutput:      false,
+			ParallelMaxWorkers: 3,
+			ParallelDuration:   parallelDuration,
+			Forward:            true,
+			QueryString:        fmt.Sprintf(`{container="%s",namespace="%s",pod="%s"}`, c.Params("container"), c.Params("namespace"), c.Params("pod")),
+		}
 
 		out, err := output.NewLogOutput(c.Response().BodyWriter(), "raw", &output.LogOutputOptions{
 			NoLabels:      q.NoLabels,
@@ -64,7 +59,12 @@ func main() {
 			return err
 		}
 
-		q.DoQueryParallel(client, out, false)
+		q.DoQueryParallel(&client.DefaultClient{
+			TLSConfig: config.TLSConfig{},
+			OrgID:     orgID,
+			Address:   lokiEndpoint,
+		}, out, false)
+
 		return nil
 	})
 
