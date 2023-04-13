@@ -9,6 +9,6 @@ home: https://github.com/giantswarm/tekton-dashboard-loki-proxy
 # and set the final URL as a value here and uncomment.
 #icon: https://s.giantswarm.io/app-icons/example/1/light.svg
 
-version: 0.0.0-dev # [[ .Version ]] if you're using architect instead of app-build-suite
+version: [[ .Version ]]
 annotations:
   application.giantswarm.io/team: team-tinkerers
