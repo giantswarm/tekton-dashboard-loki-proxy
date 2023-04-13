@@ -1,0 +1,20 @@
+# github.com/gobuffalo/packr/v2@v2.2.0
+sonatype-2019-0702
+
+# github.com/hashicorp/consul/api@v1.18.0
+CVE-2022-29153
+
+#github.com/hashicorp/consul/sdk@v0.13.0
+CVE-2022-29153
+
+# github.com/nats-io/jwt@v0.3.2
+CVE-2020-26892
+CVE-2021-3127
+
+# github.com/nats-io/nats-server/v2@v2.5.0
+CVE-2022-24450
+CVE-2022-29946
+CVE-2022-26652
+CVE-2022-42709
+CVE-2022-42708
+CVE-2022-28357
