@@ -10,3 +10,9 @@ image:
   name: giantswarm/tekton-dashboard-loki-proxy
   tag: v0.0.1
   pullPolicy: IfNotPresent
+
+replicas: 1
+
+lokiEndpoint: ""
+orgID: "1"
+since: "120h"

@@ -1,0 +1,14 @@
+apiVersion: v2
+appVersion: 0.0.1
+
+name: tekton-dashboard-loki-proxy
+description: Proxies logs from a Loki endpoint for use by Tekton Dashboard as an external-logs source
+home: https://github.com/giantswarm/tekton-dashboard-loki-proxy
+
+# If you have an icon/logo, you should add it to https://github.com/giantswarm/web-assets
+# and set the final URL as a value here and uncomment.
+#icon: https://s.giantswarm.io/app-icons/example/1/light.svg
+
+version: 0.0.0-dev # [[ .Version ]] if you're using architect instead of app-build-suite
+annotations:
+  application.giantswarm.io/team: team-tinkerers

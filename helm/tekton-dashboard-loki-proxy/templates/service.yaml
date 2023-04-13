@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ include "resource.default.name"  . }}
+  namespace: {{ include "resource.default.namespace"  . }}
+  labels:
+  {{- include "labels.common" . | nindent 4 }}
+spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    {{- include "labels.selector" . | nindent 4 }}
