@@ -8,5 +8,11 @@ project:
 image:
   registry: quay.io
   name: giantswarm/tekton-dashboard-loki-proxy
-  tag: v0.0.1
+  tag: "[[ .Version ]]"
   pullPolicy: IfNotPresent
+
+replicas: 1
+
+lokiEndpoint: ""
+orgID: "1"
+since: "120h"

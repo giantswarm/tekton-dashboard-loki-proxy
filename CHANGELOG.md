@@ -7,4 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Initial release
+- Helm chart
+
 [Unreleased]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/tree/main
