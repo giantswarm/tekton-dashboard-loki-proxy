@@ -1,5 +1,4 @@
 name: tekton-dashboard-loki-proxy
-serviceType: managed
 
 project:
   branch: "[[ .Branch ]]"

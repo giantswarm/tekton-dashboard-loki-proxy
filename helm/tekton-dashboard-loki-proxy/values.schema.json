@@ -20,13 +20,16 @@
             }
         },
         "lokiEndpoint": {
-            "type": "string"
+            "type": "string",
+            "description": "The endpoint that Loki listens on. This should include the protocol prefix and the port."
         },
         "name": {
             "type": "string"
         },
         "orgID": {
-            "type": "string"
+            "type": "string",
+            "description": "The Org / Tenant ID to query Loki with",
+            "default": "1"
         },
         "project": {
             "type": "object",
@@ -40,13 +43,14 @@
             }
         },
         "replicas": {
-            "type": "integer"
-        },
-        "serviceType": {
-            "type": "string"
+            "type": "integer",
+            "description": "The number of replicas to run",
+            "default": 1
         },
         "since": {
-            "type": "string"
+            "type": "string",
+            "description": "The duration to query for logs. This should be provided as a duration string, e.g. 24h",
+            "default": "120h"
         }
     }
 }
