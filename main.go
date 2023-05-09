@@ -36,6 +36,8 @@ func main() {
 	app.Use(logger.New())
 
 	app.Get("/logs/:namespace/:pod/:container", func(c *fiber.Ctx) error {
+		fmt.Printf("StartTime: %s\n", c.Query("startTime", ""))
+		fmt.Printf("CompletionTime: %s\n", c.Query("completionTime", ""))
 		parallelDuration, _ := time.ParseDuration("1h")
 		q := &query.Query{
 			Start:              time.Now().Add(-since),
