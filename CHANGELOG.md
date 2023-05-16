@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2023-05-16
+
 ### Added
 
 - Support for the Tekton Dashboard passing in a start / end time for the logs. (See https://github.com/tektoncd/dashboard/pull/2909)
@@ -34,7 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release
 - Helm chart
 
-[Unreleased]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.0.3...HEAD
+[Unreleased]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.0.3...v0.1.0
 [0.0.3]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/releases/tag/v0.0.1
