@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Support for the Tekton Dashboard passing in a start / end time for the logs. (See https://github.com/tektoncd/dashboard/pull/2909)
+
 ## [0.0.3] - 2023-04-14
 
 ### Added

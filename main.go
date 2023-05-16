@@ -15,6 +15,8 @@ import (
 	"github.com/grafana/loki/pkg/logcli/query"
 )
 
+const timeFormat = "2006-01-02T15:04:05Z"
+
 var (
 	lokiEndpoint string
 	orgID        string
@@ -36,10 +38,25 @@ func main() {
 	app.Use(logger.New())
 
 	app.Get("/logs/:namespace/:pod/:container", func(c *fiber.Ctx) error {
+		startTime, err := time.Parse(timeFormat, c.Query("startTime", ""))
+		if err != nil {
+			startTime = time.Now().Add(-since)
+		} else {
+			// Add an extra hour buffer to account for any jitter
+			startTime = startTime.Add(-time.Hour)
+		}
+		endTime, err := time.Parse(timeFormat, c.Query("completionTime", ""))
+		if err != nil {
+			endTime = time.Now()
+		} else {
+			// Add an extra hour buffer to account for any jitter
+			endTime = endTime.Add(time.Hour)
+		}
+
 		parallelDuration, _ := time.ParseDuration("1h")
 		q := &query.Query{
-			Start:              time.Now().Add(-since),
-			End:                time.Now(),
+			Start:              startTime,
+			End:                endTime,
 			Quiet:              true,
 			NoLabels:           true,
 			Limit:              0,
