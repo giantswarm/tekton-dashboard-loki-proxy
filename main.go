@@ -53,19 +53,16 @@ func main() {
 			endTime = endTime.Add(time.Hour)
 		}
 
-		parallelDuration, _ := time.ParseDuration("1h")
 		q := &query.Query{
-			Start:              startTime,
-			End:                endTime,
-			Quiet:              true,
-			NoLabels:           true,
-			Limit:              0,
-			BatchSize:          5000,
-			ColoredOutput:      false,
-			ParallelMaxWorkers: 3,
-			ParallelDuration:   parallelDuration,
-			Forward:            true,
-			QueryString:        fmt.Sprintf(`{container="%s",namespace="%s",pod="%s"}`, c.Params("container"), c.Params("namespace"), c.Params("pod")),
+			Start:         startTime,
+			End:           endTime,
+			Quiet:         true,
+			NoLabels:      true,
+			Limit:         0,
+			BatchSize:     5000,
+			ColoredOutput: false,
+			Forward:       true,
+			QueryString:   fmt.Sprintf(`{container="%s",namespace="%s",pod="%s"}`, c.Params("container"), c.Params("namespace"), c.Params("pod")),
 		}
 
 		out, err := output.NewLogOutput(c.Response().BodyWriter(), "raw", &output.LogOutputOptions{
@@ -76,7 +73,7 @@ func main() {
 			return err
 		}
 
-		q.DoQueryParallel(&client.DefaultClient{
+		q.DoQuery(&client.DefaultClient{
 			TLSConfig: config.TLSConfig{},
 			OrgID:     orgID,
 			Address:   lokiEndpoint,
