@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Updated to Go v1.20
+- Updated gofiber/fiber to v2.48
+- Updated prometheus/common to v0.44
+
 ## [0.2.0] - 2023-06-12
 
 ### Changed
