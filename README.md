@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/tekton-dashboard-loki-proxy.svg?style=shield)](https://circleci.com/gh/giantswarm/tekton-dashboard-loki-proxy)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/tekton-dashboard-loki-proxy/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/tekton-dashboard-loki-proxy/tree/main)
 
 # tekton-dashboard-loki-proxy chart
 
