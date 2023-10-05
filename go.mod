@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/gofiber/fiber/v2 v2.49.1
-	github.com/grafana/loki v1.6.2-0.20230411144710-c5453f156c1d
+	github.com/grafana/loki v6.7.8+incompatible
 	github.com/prometheus/common v0.44.0
 )
 
