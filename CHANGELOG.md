@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Change `app.giantswarm.io/*` labels to `application.giantswarm.io/`
+- Update Golang to v1.23.1
 
 ## [0.3.0] - 2024-02-01
 
