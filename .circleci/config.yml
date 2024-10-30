@@ -1,4 +1,5 @@
 version: 2.1
+
 orbs:
   architect: giantswarm/architect@5.11.0
 
@@ -12,16 +13,25 @@ workflows:
             # Trigger the job also on git tag.
             tags:
               only: /^v.*/
+            branches:
+              ignore:
+                - main
+                - master
+
   package-and-push-chart-on-tag:
     jobs:
       - architect/push-to-app-catalog:
-          context: "architect"
+          context: architect
           # executor: "app-build-suite" # uncomment this if you want automatic metadata generation and helm chart linting
-          name: "package and push tekton-dashboard-loki-proxy chart"
-          app_catalog: "giantswarm-catalog"
-          app_catalog_test: "giantswarm-test-catalog"
-          chart: "tekton-dashboard-loki-proxy"
+          name: package and push tekton-dashboard-loki-proxy chart
+          app_catalog: giantswarm-catalog
+          app_catalog_test: giantswarm-test-catalog
+          chart: tekton-dashboard-loki-proxy
           # Trigger job on git tag.
           filters:
             tags:
               only: /^v.*/
+            branches:
+              ignore:
+                - main
+                - master
