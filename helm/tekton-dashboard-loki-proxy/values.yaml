@@ -5,7 +5,7 @@ project:
   commit: "[[ .SHA ]]"
 
 image:
-  registry: quay.io
+  registry: gsoci.azurecr.io
   name: giantswarm/tekton-dashboard-loki-proxy
   tag: "[[ .Version ]]"
   pullPolicy: IfNotPresent
