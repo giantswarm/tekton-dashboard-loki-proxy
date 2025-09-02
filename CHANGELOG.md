@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Load container image from `gsoci.azurecr.io` by default
+
 ## [0.4.0] - 2024-09-16
 
 ### Changed
