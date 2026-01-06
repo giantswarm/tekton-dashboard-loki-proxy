@@ -29,3 +29,5 @@ spec:
         - --loki-endpoint={{ .Values.lokiEndpoint }}
         - --org-id={{ .Values.orgID }}
         - --since={{ .Values.since }}
+        resources:
+          {{- toYaml .Values.resources | nindent 10 }}
