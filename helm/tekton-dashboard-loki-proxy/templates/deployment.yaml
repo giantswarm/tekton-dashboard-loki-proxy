@@ -19,7 +19,7 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
       - name: loki-proxy
-        image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Values.image.tag }}"
+        image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ include "image.tag" . }}"
         imagePullPolicy: "{{ .Values.image.pullPolicy }}"
         ports:
         - containerPort: 3000
@@ -29,3 +29,5 @@ spec:
         - --loki-endpoint={{ .Values.lokiEndpoint }}
         - --org-id={{ .Values.orgID }}
         - --since={{ .Values.since }}
+        resources:
+          {{- toYaml .Values.resources | nindent 10 }}

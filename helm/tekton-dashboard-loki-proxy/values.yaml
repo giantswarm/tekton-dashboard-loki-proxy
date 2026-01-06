@@ -1,13 +1,9 @@
 name: tekton-dashboard-loki-proxy
 
-project:
-  branch: "[[ .Branch ]]"
-  commit: "[[ .SHA ]]"
-
 image:
   registry: gsoci.azurecr.io
   name: giantswarm/tekton-dashboard-loki-proxy
-  tag: "[[ .Version ]]"
+  tag: ""
   pullPolicy: IfNotPresent
 
 replicas: 1
@@ -32,3 +28,10 @@ securityContext:
   runAsNonRoot: true
   seccompProfile:
     type: RuntimeDefault
+
+resources:
+  requests:
+    cpu: 10m
+    memory: 32Mi
+  limits:
+    memory: 64Mi
