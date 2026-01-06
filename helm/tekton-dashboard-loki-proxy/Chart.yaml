@@ -1,13 +1,12 @@
 apiVersion: v2
-appVersion: [[ .Version ]]
-
+appVersion: 0.4.2-dev
 name: tekton-dashboard-loki-proxy
-version: [[ .Version ]]
+version: 0.4.2-dev
 description: Proxies logs from a Loki endpoint for use by Tekton Dashboard as an external-logs source
-
 home: https://github.com/giantswarm/tekton-dashboard-loki-proxy
+icon: https://s.giantswarm.io/app-icons/giantswarm/1/dark.svg
 sources:
 - https://github.com/giantswarm/tekton-dashboard-loki-proxy
-
 annotations:
   application.giantswarm.io/team: team-tinkerers
+  io.giantswarm.application.team: team-tinkerers

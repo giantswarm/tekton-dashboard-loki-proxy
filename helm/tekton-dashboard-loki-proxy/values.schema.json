@@ -50,17 +50,6 @@
                 }
             }
         },
-        "project": {
-            "type": "object",
-            "properties": {
-                "branch": {
-                    "type": "string"
-                },
-                "commit": {
-                    "type": "string"
-                }
-            }
-        },
         "replicas": {
             "type": "integer"
         },
