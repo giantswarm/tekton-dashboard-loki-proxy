@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Migrate to App Build Suite (ABS) for building and publishing Helm charts.
+- Chart: Add `io.giantswarm.application.audience: giantswarm` annotation to `Chart.yaml`.
 
 ## [0.4.1] - 2025-09-02
 

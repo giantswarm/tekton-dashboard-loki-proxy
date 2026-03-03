@@ -9,4 +9,5 @@ sources:
 - https://github.com/giantswarm/tekton-dashboard-loki-proxy
 annotations:
   application.giantswarm.io/team: team-tinkerers
+  io.giantswarm.application.audience: giantswarm
   io.giantswarm.application.team: team-tinkerers
