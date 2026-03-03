@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-03-03
+
 ### Changed
 
 - Migrate to App Build Suite (ABS) for building and publishing Helm charts.
@@ -81,7 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release
 - Helm chart
 
-[Unreleased]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.2.2...v0.3.0
