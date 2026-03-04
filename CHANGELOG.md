@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Revert prometheus/common to v0.44.0 to fix build broken by incompatible renovate bumps.
+- Fix Dockerfile `as` to `AS` casing warning.
+
+### Changed
+
+- Update gofiber/fiber to v2.52.12.
+
 ## [0.5.0] - 2026-03-03
 
 ### Changed
