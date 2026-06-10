@@ -26,3 +26,4 @@ CVE-2024-51744 until=2026-07-05 # github.com/golang-jwt/jwt/v4@v4.4.3
 CVE-2025-30204 until=2026-07-05 # github.com/golang-jwt/jwt/v4@v4.4.3
 CVE-2025-65637 until=2026-07-05 # github.com/sirupsen/logrus@v1.9.0
 CVE-2023-40577 until=2026-07-05 # github.com/prometheus/alertmanager@v0.25.0
+CVE-2026-41178 until=2026-07-10 # go.opentelemetry.io/otel@v1.11.2
