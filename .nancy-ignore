@@ -71,3 +71,4 @@ CVE-2026-46604 until=2026-07-30 # golang.org/x/image@v0.0.0-20190802002840-cff24
 CVE-2026-33186 until=2026-07-31 # google.golang.org/grpc@v1.52.3
 CVE-2023-40577 until=2026-08-05 # github.com/prometheus/alertmanager@v0.25.0
 CVE-2025-65637 until=2026-08-05 # github.com/sirupsen/logrus@v1.9.0
+CVE-2024-24786 until=2026-08-06 # google.golang.org/protobuf@v1.30.0
