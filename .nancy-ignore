@@ -69,3 +69,4 @@ CVE-2023-29408 until=2026-09-30 # golang.org/x/image@v0.0.0-20190802002840-cff24
 CVE-2026-33809 until=2026-09-30 # golang.org/x/image@v0.0.0-20190802002840-cff245a6509b
 CVE-2026-33813 until=2026-09-30 # golang.org/x/image@v0.0.0-20190802002840-cff245a6509b
 CVE-2026-46601 until=2026-09-30 # golang.org/x/image@v0.0.0-20190802002840-cff245a6509b
+CVE-2026-37236 until=2026-10-01 # github.com/grpc-ecosystem/grpc-gateway@v1.16.0
