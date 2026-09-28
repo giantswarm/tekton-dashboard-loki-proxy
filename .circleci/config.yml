@@ -4,20 +4,20 @@ orbs:
   architect: giantswarm/architect@10.11.1
 
 workflows:
-  package-and-push-chart-on-tag:
+  build:
     jobs:
       - architect/push-to-app-catalog:
+          name: push-to-giantswarm-catalog
           context: architect
           executor: app-build-suite
-          name: package and push tekton-dashboard-loki-proxy chart
+          chart: tekton-dashboard-loki-proxy
+          override_app_version: false
           app_catalog: giantswarm-catalog
           app_catalog_test: giantswarm-test-catalog
-          chart: tekton-dashboard-loki-proxy
-          # Trigger job on git tag.
           filters:
-            tags:
-              only: /^v.*/
             branches:
               ignore:
                 - main
                 - master
+            tags:
+              only: /^v.*/
