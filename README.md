@@ -6,11 +6,10 @@
 
 ## Installing
 
-There are several ways to install this app onto a Giant Swarm workload cluster.
+There are several ways to install this app onto a workload cluster.
 
-- [Using GitOps to instantiate the App](https://docs.giantswarm.io/advanced/gitops/#installing-managed-apps)
-- [Using our web interface](https://docs.giantswarm.io/ui-api/web/app-platform/#installing-an-app).
-- By creating an [App resource](https://docs.giantswarm.io/ui-api/management-api/crd/apps.application.giantswarm.io/) in the management cluster as explained in [Getting started with App Platform](https://docs.giantswarm.io/app-platform/getting-started/).
+- [Using GitOps to instantiate the App](https://docs.giantswarm.io/tutorials/continuous-deployment/apps/add-appcr/)
+- By creating an [App resource](https://docs.giantswarm.io/reference/platform-api/crd/apps.application.giantswarm.io) using the platform API as explained in [Getting started with App Platform](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/).
 
 Using Helm:
 
@@ -81,4 +80,4 @@ metadata:
   namespace: abc12
 ```
 
-See our [full reference on how to configure apps](https://docs.giantswarm.io/app-platform/app-configuration/) for more details.
+See our [full reference on how to configure apps](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/app-configuration/) for more details.
