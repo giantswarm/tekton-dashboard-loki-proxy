@@ -5,7 +5,7 @@ go 1.26.0
 require (
 	github.com/gofiber/fiber/v3 v3.6.1
 	github.com/grafana/loki v1.6.2-0.20230411144710-c5453f156c1d
-	github.com/prometheus/common v0.44.0
+	github.com/prometheus/common v0.73.0
 )
 
 require (
