@@ -1,25 +1,23 @@
-# Build the manager binary
-FROM golang:1.27 AS builder
+# Use Go for building the app.
+FROM --platform=${BUILDPLATFORM} golang:1.27 AS app
 
-WORKDIR /workspace
-# Copy the Go Modules manifests
-COPY go.mod go.mod
-COPY go.sum go.sum
-# cache deps before building and copying source so that we don't need to re-download as much
-# and so that source changes don't invalidate our downloaded layer
-RUN go mod download
+ARG TARGETOS
+ARG TARGETARCH
 
-# Copy the go source
-COPY main.go main.go
+# Copy sources.
+WORKDIR /app
+COPY . .
 
-# Build
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o tekton-dashboard-loki-proxy main.go
+# Build app.
+RUN GOOS="${TARGETOS}" GOARCH="${TARGETARCH}" CGO_ENABLED=0 go build main.go
 
-# Use distroless as minimal base image to package the tekton-dashboard-loki-proxy binary
-# Refer to https://github.com/GoogleContainerTools/distroless for more details
+# Use a distroless image for running the app.
 FROM gcr.io/distroless/static:nonroot
-WORKDIR /
-COPY --from=builder /workspace/tekton-dashboard-loki-proxy .
-USER 65532:65532
 
-ENTRYPOINT ["/tekton-dashboard-loki-proxy"]
+# Copy app.
+COPY --from=app /app/tekton-dashboard-loki-proxy /tekton-dashboard-loki-proxy
+
+# Define entrypoint.
+USER 65532:65532
+WORKDIR /
+ENTRYPOINT [ "/tekton-dashboard-loki-proxy" ]
