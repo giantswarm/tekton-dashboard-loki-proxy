@@ -10,9 +10,9 @@ import (
 	"github.com/gofiber/fiber/v3/middleware/logger"
 	"github.com/prometheus/common/config"
 
-	"github.com/grafana/loki/pkg/logcli/client"
-	"github.com/grafana/loki/pkg/logcli/output"
-	"github.com/grafana/loki/pkg/logcli/query"
+	"github.com/grafana/loki/v3/pkg/logcli/client"
+	"github.com/grafana/loki/v3/pkg/logcli/output"
+	"github.com/grafana/loki/v3/pkg/logcli/query"
 )
 
 const timeFormat = "2006-01-02T15:04:05Z"
@@ -32,12 +32,10 @@ func init() {
 }
 
 func main() {
-	app := fiber.New(fiber.Config{
-		DisableStartupMessage: true,
-	})
+	app := fiber.New(fiber.Config{})
 	app.Use(logger.New())
 
-	app.Get("/logs/:namespace/:pod/:container", func(c *fiber.Ctx) error {
+	app.Get("/logs/:namespace/:pod/:container", func(c fiber.Ctx) error {
 		startTime, err := time.Parse(timeFormat, c.Query("startTime", ""))
 		if err != nil {
 			startTime = time.Now().Add(-since)
@@ -82,5 +80,7 @@ func main() {
 		return nil
 	})
 
-	log.Fatal(app.Listen(":3000"))
+	log.Fatal(app.Listen(":3000", fiber.ListenConfig{
+		DisableStartupMessage: true,
+	}))
 }
