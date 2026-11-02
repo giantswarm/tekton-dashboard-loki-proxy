@@ -9,7 +9,7 @@ WORKDIR /app
 COPY . .
 
 # Build app.
-RUN GOOS="${TARGETOS}" GOARCH="${TARGETARCH}" CGO_ENABLED=0 go build main.go
+RUN GOOS="${TARGETOS}" GOARCH="${TARGETARCH}" CGO_ENABLED=0 go build -o tekton-dashboard-loki-proxy main.go
 
 # Use a distroless image for running the app.
 FROM gcr.io/distroless/static:nonroot
