@@ -9,7 +9,7 @@ go 1.27.3
 // grep --extended-regexp 'replace|=>' --after-context=1 "$(go env GOMODCACHE)/github.com/grafana/loki/v3@<version from below>/go.mod" | grep '=>'
 //
 replace (
-	github.com/hashicorp/memberlist => github.com/grafana/memberlist v0.3.1-0.20251126142931-6f9f62ab6f86
+	github.com/hashicorp/memberlist => github.com/grafana/memberlist v0.3.1-0.20260923065330-d17264b4a464
 	github.com/thanos-io/objstore => github.com/grafana/objstore v0.0.0-20250728171719-b5d3b766d1b0
 )
 
@@ -195,7 +195,7 @@ require (
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-hclog v1.6.3 // indirect
 	github.com/hashicorp/go-immutable-radix v1.3.1 // indirect
-	github.com/hashicorp/go-metrics v0.5.4 // indirect
+	github.com/hashicorp/go-metrics v0.6.0 // indirect
 	github.com/hashicorp/go-msgpack/v2 v2.1.5 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.8 // indirect
