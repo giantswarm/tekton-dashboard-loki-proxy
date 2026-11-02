@@ -10,7 +10,7 @@ go 1.27.3
 //
 replace (
 	github.com/hashicorp/memberlist => github.com/grafana/memberlist v0.3.1-0.20251126142931-6f9f62ab6f86
-	github.com/thanos-io/objstore => github.com/grafana/objstore v0.0.0-20250728171719-b5d3b766d1b0
+	github.com/thanos-io/objstore => github.com/grafana/objstore v0.0.0-20250129163715-ec72e5a88a79
 )
 
 require (
@@ -161,7 +161,6 @@ require (
 	github.com/goccy/go-json v0.10.6 // indirect
 	github.com/gofiber/schema v1.8.8 // indirect
 	github.com/gofiber/utils/v2 v2.6.2 // indirect
-	github.com/gofrs/flock v0.13.0 // indirect
 	github.com/gogo/googleapis v1.4.1 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/gogo/status v1.1.1 // indirect
