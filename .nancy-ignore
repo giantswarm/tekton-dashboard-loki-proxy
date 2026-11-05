@@ -1,4 +1,3 @@
-# pkg:golang/github.com/apache/thrift@v0.24.0
 CVE-2026-63772 until=2026-12-02
 CVE-2026-66054 until=2026-12-02
 CVE-2026-66055 until=2026-12-02
@@ -10,31 +9,15 @@ CVE-2026-94636 until=2026-12-02
 CVE-2026-94637 until=2026-12-02
 CVE-2026-94655 until=2026-12-02
 CVE-2026-96990 until=2026-12-02
-
-# pkg:golang/github.com/containerd/containerd/v2@v2.2.9
 CVE-2026-95839 until=2026-12-02
-
-# pkg:golang/github.com/go-openapi/swag/jsonutils@v0.26.1
 CVE-2026-93450 until=2026-12-02
-
-# pkg:golang/github.com/hashicorp/consul/api@v1.33.4
 CVE-2026-115804 until=2026-12-02
-
-# pkg:golang/github.com/hashicorp/consul/sdk@v0.17.2
 CVE-2026-115804 until=2026-12-02
-
-# pkg:golang/github.com/hashicorp/memberlist@v0.5.4
 CVE-2026-14362 until=2026-12-02
-
-# pkg:golang/github.com/hashicorp/nomad/api@v0.0.0-20260528135333-5b027732945f
 CVE-2026-107347 until=2026-12-02
-
-# pkg:golang/github.com/jackc/pgx/v5@v5.8.0
 CVE-2026-33815 until=2026-12-02
 CVE-2026-33816 until=2026-12-02
 CVE-2026-41889 until=2026-12-02
-
-# pkg:golang/github.com/moby/moby/v2@v2.0.0-beta.15
 CVE-2021-41089 until=2026-12-02
 CVE-2022-24769 until=2026-12-02
 CVE-2022-36109 until=2026-12-02
@@ -45,22 +28,12 @@ CVE-2026-41568 until=2026-12-02
 CVE-2026-42306 until=2026-12-02
 CVE-2026-92542 until=2026-12-02
 CVE-2026-92543 until=2026-12-02
-
-# pkg:golang/github.com/moby/spdystream@v0.5.0
 CVE-2026-35469 until=2026-12-02
-
-# pkg:golang/github.com/shamaton/msgpack/v3@v3.2.3
 CVE-2026-32284 until=2026-12-02
-
-# pkg:golang/github.com/yuin/goldmark@v1.4.13
 CVE-2026-5160 until=2026-12-02
-
-# pkg:golang/go.mongodb.org/mongo-driver@v1.17.6
 CVE-2026-107325 until=2026-12-02
 CVE-2026-2303 until=2026-12-02
 CVE-2026-88031 until=2026-12-02
-
-# pkg:golang/golang.org/x/image@v0.0.0-20190802002840-cff245a6509b
 CVE-2022-41727 until=2026-12-02
 CVE-2023-29407 until=2026-12-02
 CVE-2023-29408 until=2026-12-02
@@ -73,7 +46,6 @@ CVE-2026-46601 until=2026-12-02
 CVE-2026-46602 until=2026-12-02
 CVE-2026-46603 until=2026-12-02
 CVE-2026-46604 until=2026-12-02
-
-# pkg:golang/golang.org/x/net@v0.61.0
 CVE-2026-78661 until=2026-12-02
 CVE-2026-97045 until=2026-12-02
+CVE-2026-119566 until=2026-12-04 # github.com/prometheus/prometheus@v0.312.1-0.20260612131846-2ad3a8717015 since=2026-11-04
