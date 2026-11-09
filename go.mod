@@ -61,7 +61,7 @@ require (
 	github.com/Workiva/go-datastructures v1.1.7 // indirect
 	github.com/alecthomas/units v0.0.0-20240927000941-0f3dac36c52b // indirect
 	github.com/aliyun/aliyun-oss-go-sdk v3.0.2+incompatible // indirect
-	github.com/andybalholm/brotli v1.2.6 // indirect
+	github.com/andybalholm/brotli v1.2.7 // indirect
 	github.com/apache/arrow-go/v18 v18.5.2 // indirect
 	github.com/apache/cassandra-gocql-driver/v2 v2.0.0 // indirect
 	github.com/apache/thrift v0.24.0 // indirect
