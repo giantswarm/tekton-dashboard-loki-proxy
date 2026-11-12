@@ -49,3 +49,4 @@ CVE-2026-46604 until=2026-12-02
 CVE-2026-78661 until=2026-12-02
 CVE-2026-97045 until=2026-12-02
 CVE-2026-119566 until=2026-12-04 # github.com/prometheus/prometheus@v0.312.1-0.20260612131846-2ad3a8717015 since=2026-11-04
+CVE-2026-119591 until=2026-12-11 # modernc.org/sqlite@v1.46.1 since=2026-11-11
