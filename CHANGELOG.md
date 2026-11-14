@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Put the time a line was logged at in front of it when Tekton Dashboard asks for it with `timestamps=true`, so that the dashboard shows timestamps for logs from Loki as it does for logs of running pods.
+
+### Changed
+
+- Query Loki and serve requests with the Go standard library only. Without `grafana/loki`, `gofiber/fiber` and all they depend on, the binary shrinks from 190 MB to 11 MB.
+- Send a log while it is fetched from Loki, 5000 lines at a time, instead of collecting it first. The memory needed no longer grows with the log.
+- Log requests as JSON.
+- Refuse to start when `lokiEndpoint` is not an `http` or `https` URL. Before, the proxy started and terminated with the first request.
+- Serve logs at `/logs/<namespace>/<pod>/<container>` only, no longer with a trailing slash or in another case as well.
+
+### Fixed
+
+- Respond with `502 Bad Gateway` when a query to Loki fails. If a part of the log is sent already, end it with a line starting with `::error::`, which Tekton Dashboard shows as an error, and abort the response. Before, the proxy terminated.
+- Quote the names of namespace, pod and container in the query to Loki. Before, a `"` in one of them, in a request sent to the proxy directly, changed the query or terminated the proxy.
+- Return lines with the same timestamp in the order Loki has them, and all of them when they are equal. Before, their order was arbitrary, and one of two equal lines was lost when Loki returned them in different batches.
+- Return the log of a container with 5000 or more lines for a single timestamp: the first 5000 of them, and all that follows. Before, the proxy terminated.
+
 ## [1.0.0] - 2026-11-02
 
 ### Fixed
