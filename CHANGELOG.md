@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-11-14
+
 ### Added
 
 - Put the time a line was logged at in front of it when Tekton Dashboard asks for it with `timestamps=true`, so that the dashboard shows timestamps for logs from Loki as it does for logs of running pods.
@@ -114,7 +116,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release
 - Helm chart
 
-[Unreleased]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.5.0...v1.0.0
 [0.5.0]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/giantswarm/tekton-dashboard-loki-proxy/compare/v0.4.0...v0.4.1
