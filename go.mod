@@ -15,7 +15,7 @@ replace (
 
 require (
 	github.com/gofiber/fiber/v3 v3.7.0
-	github.com/grafana/loki/v3 v3.7.9
+	github.com/grafana/loki/v3 v3.7.10
 	github.com/prometheus/common v0.74.0
 )
 
