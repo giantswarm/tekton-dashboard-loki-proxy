@@ -6,9 +6,18 @@ orbs:
 workflows:
   build:
     jobs:
+      - architect/go-test:
+          name: go-test
+          context: architect
+          filters:
+            tags:
+              only: /^v.*/
+
       - architect/push-to-registries:
           name: push-to-registries
           context: architect
+          requires:
+            - go-test
           filters:
             branches:
               ignore:
